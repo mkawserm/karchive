@@ -50,16 +50,11 @@ android{
     INSTALLS = headers target
 }
 
-win32 {
+win32:*g++* {
     headers.path=$$[QT_INSTALL_HEADERS]/karchive
     headers.files=$$KARCHIVE_PUBLIC_HEADERS
-    CONFIG(staticlib){
-        target.path=$$PREFIX/lib
-        QMAKE_PKGCONFIG_LIBDIR = $$PREFIX/lib/
-    } else {
-        target.path=$$PREFIX/bin
-        QMAKE_PKGCONFIG_LIBDIR = $$PREFIX/bin/
-    }
+    target.path=$$[QT_HOST_LIBS]
+    INSTALLS = headers target
 }
 
 linux:!android{
