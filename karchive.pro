@@ -55,7 +55,7 @@ win32:*g++* {
     headers.files=$$KARCHIVE_PUBLIC_HEADERS
 
     copy_dll.files = $$[QT_HOST_LIBS]/karchive.dll
-    copy_dll.path = $$QTPATH/../bin
+    copy_dll.path = $$QTPATH
 
     target.path=$$[QT_HOST_LIBS]
 
