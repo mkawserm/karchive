@@ -65,6 +65,6 @@ win32:*g++* {
 linux:!android{
     headers.path=$$[QT_INSTALL_HEADERS]/karchive
     headers.files=$$KARCHIVE_PUBLIC_HEADERS
-    target.path=$$[QT_INSTALL_HEADERS]../lib
+    target.path=$$[QT_INSTALL_HEADERS]/../lib
     INSTALLS = headers target
 }
